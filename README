@@ -1,13 +1,11 @@
 ### Cheeseburger
-    Delicious k/v db
+    Delicious k/v db, WiP
 
 ### What's inside
 - Memcached backend
 - Writes on LevelDB
 - Serialize with msgpack
 - Replicates with ZMQ
-
-So many awesome components that I had to name it cheeseburger.
 
 
 - fetch memcached source code, engine-pu branch: https://github.com/memcached/memcached/tree/engine-pu
@@ -16,6 +14,8 @@ $ cd memcached-engine-pu
 $ ./config/autorun.sh
 $ ./configure --prefix=/opt/memcached
 $ make all install
+
+- If you don't have it, install memcapable (on MacOSX tou have to brew install libmemcached)
 
 - Test it
 $ /opt/memcached/bin/memcached -E /opt//memcached/lib/memcached/default_engine.so
