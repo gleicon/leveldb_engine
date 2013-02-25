@@ -1,0 +1,39 @@
+### Cheeseburger
+    Delicious k/v db
+
+### What's inside
+- Memcached backend
+- Writes on LevelDB
+- Serialize with msgpack
+- Replicates with ZMQ
+
+So many awesome components that I had to name it cheeseburger.
+
+
+- fetch memcached source code, engine-pu branch: https://github.com/memcached/memcached/tree/engine-pu
+$ git clone -b engine-pu git://github.com/memcached/memcached.git memcached-engine-pu
+$ cd memcached-engine-pu
+$ ./config/autorun.sh
+$ ./configure --prefix=/opt/memcached
+$ make all install
+
+- Test it
+$ /opt/memcached/bin/memcached -E /opt//memcached/lib/memcached/default_engine.so
+
+in a different term:
+
+$ memcapable
+
+All tests should pass. your memcached is ok and can switch backends.
+
+$ cd leveldb_engine
+
+Edit Makefile if you change memcached's include location
+
+$ make clean all
+$ /opt/memcached/bin/memcached -E redis_engine.so
+
+in a different term
+
+$ memcapable
+
