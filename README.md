@@ -1,4 +1,4 @@
-### Cheeseburger
+### LevelDB Engine for Memcached
     Delicious k/v db, WiP
 
 ### What's inside
