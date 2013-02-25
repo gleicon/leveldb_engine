@@ -31,7 +31,7 @@ $ cd leveldb_engine
 Edit Makefile if you change memcached's include location
 
 $ make clean all
-$ /opt/memcached/bin/memcached -E redis_engine.so
+$ /opt/memcached/bin/memcached -E leveldb_engine
 
 in a different term
 
